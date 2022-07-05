@@ -1,3 +1,4 @@
+package Day3;
 public class Day3_2 {
 
 // 숫자 반복출력 하는 표 만들기

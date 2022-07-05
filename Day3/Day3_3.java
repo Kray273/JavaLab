@@ -1,3 +1,4 @@
+package Day3;
 public class Day3_3 {
     //10X5별 출력
     public static void main(String[] args) {

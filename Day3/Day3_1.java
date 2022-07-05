@@ -1,3 +1,4 @@
+package Day3;
 public class Day3_1 {
     public static void main(String[] args) {
         //반복문

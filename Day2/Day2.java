@@ -1,3 +1,4 @@
+package Day2;
 /*Day2 IF에 대해서 22.07.01 by.Kray
 
 

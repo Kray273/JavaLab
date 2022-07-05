@@ -1,3 +1,4 @@
+package Day3;
 public class Day3_4 {
     //가로별 출력
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package Day3;
 public class Day3_6 {
 //반잘린 삼각형
 public static void main(String[] args) {

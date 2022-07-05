@@ -1,3 +1,4 @@
+package Day3;
 import java.util.Scanner;
 //원하는 숫자만큼 별 나오게 하기
 public class Day3_7 {
