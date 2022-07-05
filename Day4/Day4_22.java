@@ -7,15 +7,15 @@ public class Day4_22 {
     public static void main(String[] args) {
     Scanner stdIn = new Scanner(System.in);
    
-     Loop1 : while(true) {
+     while(true) {
         System.out.println("number:");
         int input = stdIn.nextInt();
         
-        if( 100 >= input && input<= 999){
-            System.out.printf("input number is %d%n", input);
-            break Loop1;
+        if( !(100 > input || input > 999)){
+            System.out.printf("true input number is %d%n", input);
+            break;
         } else{
-            System.out.printf("input number is %d%n", input);
+            System.out.printf("false input number is %d%n", input);
         }
 
     
