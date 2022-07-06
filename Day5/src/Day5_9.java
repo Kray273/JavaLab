@@ -16,9 +16,9 @@ public class Day5_9 {
 			 
 		for(int j=0; j< counter.length; j++) {
 			counter[numArr[j]]++;
-//			if(counter == j ) {
-//			System.out.printf("%d의 개수 : %d\n", j, numArr[j]);
-//			}
+		}
+		for(int i=0; i<numArr.length; i++) {
+			System.out.println(i + "의 개수 :" + counter[i]);
 		}
 		
 		
