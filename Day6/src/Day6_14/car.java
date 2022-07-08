@@ -11,8 +11,7 @@ public class car {
 		this(name, 0);
 	}
 	car(String name, int num) {
-		this.name =name;
+		this.name = name;
 		this.num = num;
 	}
-	
 }
