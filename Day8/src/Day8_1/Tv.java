@@ -24,7 +24,7 @@ public class Tv {
 	public static void main(String[] args) {
 		Tv2 ctv= new Tv2();
 		ctv.channel = 10;	//조상으로 부터 받은 멤버
-		ctv.channelUp();	//조상으로 부터 받은 멤버
+		ctv.channelDown();	//조상으로 부터 받은 멤버
 		System.out.println(ctv.channel);
 		ctv.displayCaption("Hello, world:");
 		ctv.caption = true; //캡션(자막) 기능을 켠다.
