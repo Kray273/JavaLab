@@ -1,4 +1,4 @@
-package Day11_4;
+
 
 import java.util.*;
 public class check {
@@ -15,19 +15,19 @@ public class check {
 		try {
 				for (int i = 0; i < ex.length(); i++) {
 					char ch = ex.charAt(i);
-					if(ch=='C') {
+					if(ch=='(') {
 						st.push(ch+"");
 					} else if (ch==')') {
 						st.pop();
 					}
 				}
 				if (st.isEmpty()) {
-					System.out.println("괄호가 일치함");
+					System.out.println("ture");
 				} else {
-					System.out.println("괄호가 일차하지 않음");
+					System.out.println("not ture");
 				}
 		} catch(EmptyStackException e) {
-			System.out.println("괄호가 일차하지 않음");
+			System.out.println("not ture");
 		}
 	}
 }
