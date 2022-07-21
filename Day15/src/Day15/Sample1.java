@@ -9,5 +9,8 @@ public class Sample1 {
 		} else {
 			System.out.println("b");
 		}
+		for (int i = 0; i < args.length; i++) {
+			
+		}
 	}
 }
