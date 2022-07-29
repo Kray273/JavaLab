@@ -1,5 +1,5 @@
 # JavaLab
-Bigdata lecture
+Bigdata lecture https://www.notion.so/ce0f5d22bf4848baa4ece180773255bd?v=2dec0a18a2874eb38ea88e972b06170e
 
 Day1 https://www.notion.so/Day01-fc516089f1444e54910913a1f9999c48
 
