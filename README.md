@@ -33,7 +33,7 @@ Day17 https://www.notion.so/Day17-6b135704ad8a429e956202adb206ad4b
 
 Day105 https://www.notion.so/Day-S-105_-86ea16f516de4dfbb0a758a59e5f0d11
 
-Day106
+Day106 https://www.notion.so/Day-S-106_-String-09ccc0693b674491adb71554c77f33db
 
 Day107
 
