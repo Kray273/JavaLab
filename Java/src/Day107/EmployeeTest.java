@@ -23,13 +23,12 @@ class Employee{
         int id = 1000;
         System.out.printf("사번 : %d, 이름 : %s, 직급 : %s, 부서명 : %s, 급여 : %.2f입니다.\n",
                 + id, name, this.title, dept, salary);
-    //this는 원하는 변수의 위치를 찾아가는 것으로
-        // this.id가 되면 main에서 설정한 id
-        // id가 되면 지역변수 내에 설정한 id
-        // 지역변수가 설정이 안되어 있다면 main
-    // 매개변수에 대해서
-        // this.mame 이되면 main에서 설정한 name
-        // name이 되면, 전달받을 매개변수의 name
+        //this는 원하는 변수의 위치를 찾아가는 것으로
+            // this.id가 되면 객체변수 id
+             // id가 되면 지역변수 id
+        // 매개변수에 대해서
+            // this.mame 이되면 객체변수 name
+            // name이 되면, 매개변수 name
     }
 
 }
