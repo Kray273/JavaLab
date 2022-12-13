@@ -7,10 +7,7 @@ class Book{
     private String title; //책제목
     private int price; //가격
     //    3. 멤버변수를 모두 초기화하는 생성자 가 있어야 한다.
-    Book(){ //매개변수가 없는 new Book
-        String title;
-        int price;
-    }
+    Book(){ } //매개변수가 없는 new Book5는 set매서드를 통해 값을 대입하기에 수행하는 문장이 없다.
     Book(String title, int price){ //매개변수가 있는 new Book
         this.title = title;
         this.price = price;
@@ -35,16 +32,15 @@ class Book{
         return price;
     }
 
-
 }
 class BookMgr extends Book{
     //BookMgr 클래스의 제약조건
     //    1. 책(Book) 객체 여러 개를 저장할 수 있는 책 목록(booklist)이라는 배열을 멤버변수로 가져야 한다.
     Book[] bookList; //Book이란 자료형을 가진 배열을 선언
     //    2. 책 목록(booklist)이라는 배열 변수를 초기화하는 생성자 메서드를 작성해야 한다.
-    public BookMgr(Book[] bookList) { //매개변수로 전달된 bookList를 배열인 자료형으로 받기
-        this.bookList = bookList;// 생성자 초기화
-    }
+    BookMgr(Book[] bookList) { //매개변수로 전달된 bookList를 배열인 자료형으로 받기
+        this.bookList = bookList;
+    } // 생성자 초기화
     //     3. 책 목록을 화면에 출력하는 printBookList() 메서드가 있어야 한다.
     void printBooklist(){
         for(int i=0; i< bookList.length; i++){
@@ -55,7 +51,7 @@ class BookMgr extends Book{
     int total; // Total을 만들어줄 변수 선언
     void printTotalPrice(){
         for(int i=0; i < bookList.length; i++){
-           total += bookList[i].getPrice();
+           total += bookList[i].getPrice(); // 반복으로 출력해서 하나씩 누적한다.
         }
         System.out.printf("전체 책 가격의 합 : %d", total);
     }
