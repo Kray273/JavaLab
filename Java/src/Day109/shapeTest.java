@@ -7,14 +7,41 @@ abstract class Shape{
     }
 } // Shape
 
-class Rectangle{
+class Rectangle extends Shape{
     int width, height;
+    @Override
+    void area(){
+        System.out.println("가로 = " + width + ", 세로 = " + height+"인 사각형의 면적 = " + (width * height));
+    }
+
+    @Override
+    void circum() {
+        System.out.println("가로 = " + width + ", 세로 = " + height+"인 사각형의 둘레 = " + 2*(width * height));
+    }
+
+    public Rectangle(String width, String height) {
+        this.width = Integer.parseInt(width);
+        this.height = Integer.parseInt(height);
+    }
 } // Rectangle
 
-class Circle{
+class Circle extends Shape{
     int radius;
     static final double pi = 3.14; //값을 변경하지 못하는 채로 공유!
 
+    @Override
+    void area() {
+        System.out.println("반지름 = " + radius + "인 원의 면적 = " + (radius * radius * pi));
+    }
+
+    @Override
+    void circum() {
+        System.out.println("반지름 = " + radius + "인 원의 둘레 = " + ( 2 * radius * pi));
+    }
+
+    public Circle(String radius) {
+        this.radius = Integer.parseInt(radius);
+    }
 }// Circle
 
 public class shapeTest /* extends Object */{
@@ -28,13 +55,14 @@ public class shapeTest /* extends Object */{
 
         // "면적"과 "둘레"를 구할 수 있어야 한다. 필수 구현
         Shape s = null;
-        if(args.length == 2 && args[0].equals("rect")) {
+        if(args.length == 3 && args[0].equals("rect")) {
             s = new Rectangle(args[1], args[2]);
-        }else if(args.length == 3 && args[0].equals("cir")){
+        } else if(args.length == 2 && args[0].equals("cir")){
             s = new Circle(args[1]);
-        }else {
+        } else {
             System.out.println("지원되지 않는 도형입니다.");
         }
+        //Shape 타입이면 2개 필수 포함, 서로 다른 내용 실행.
         s.area();
         s.circum();
     }//main(args)
