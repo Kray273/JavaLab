@@ -54,24 +54,25 @@ class Member extends Information{
 }//class Member
 
 class InformationList{
-    Information[] list; //information객채 맴버변수
-
-    InformationList(int num){ // InformationLis로 받아온 매개변수를 이용.
-        this.list = new Information[num]; // num의 크기를 사진 배열 생성
+    Information[] arr; //information객채 맴버변수
+    int length; //array의 길이
+    int count; // index 용도로 사용.
+    InformationList(int length){ // InformationLis로 받아온 매개변수를 이용.
+        this.length = length; // 매개변수로 전달된 내용을 출력
+        this.arr = new Information[length]; // length만큼의 배열 생성
     }
+
     void add(Information sth){ //매개변수로 전달받은 instance들을 배열에 삽입.
-        for(int i=0; i < list.length; i++){
-            if(list[i] ==null){ //배열의 빈공간을 찾아
-                list[i] = sth; //전달받은 instance의 주소값을 저장
-                break;//없을시 0번째만 반복적으로 들어감.
-            }
-        }
+         if(count >= arr.length){ //배열의 길이보다 count가 커지면
+            return; //매서드 중단. add()정지
+         }
+         arr[count++] = sth; //전달받은 instance의 주소값을 저장
     }
 
     public void read(){
         System.out.println("============================");
-        for(int i=0; i < 5; i++){ //5개만 출력할 계획
-            System.out.println(list[i].print());//add()에서 형변환이 이루어졌다.
+        for(int i=0; i < arr.length; i++){ //5개만 출력할 계획
+            System.out.println(arr[i].print());//add()에서 형변환이 이루어졌다.
             //따라서 알아서 해당하는 class의 print()를 호출
         }
         System.out.println("============================");
@@ -84,8 +85,8 @@ public class Test2 {
 
         //InformationList[] list = new InformationList[6];
         // InformationList[] != InformationList 이 둘은 같지 않다.
-        //InformationList[] 선언시 list.add[?]()는 찾아도 list.read()는 호출할 수 없다.
-        InformationList list = new InformationList(6);
+        //InformationList[] 선언시 list[?].add()는 찾아도 list.read()는 호출할 수 없다.
+        InformationList list = new InformationList(5);
         list.add(new Board("1","게시물1","현재 조회수는 10입니다.",10));
         list.add(new Product("100","웅진비데",300000));
         list.add(new Member("hong","홍길동","hong@a.com","010-222-2222"));
