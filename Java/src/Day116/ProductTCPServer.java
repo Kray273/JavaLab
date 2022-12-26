@@ -16,7 +16,7 @@ public class ProductTCPServer {
             System.out.println("[서버는 " + clientIp + " 클라이언트의 접속을 허용합니다.]");
 ////////////////////////////////////////////////////////////////////////////////////////
             //클라이언트의 요청을 수락 = 입력스트림
-            File file = new File("Day116/Product.txt");
+            File file = new File("Product.txt");
             FileWriter fW = new FileWriter(file, true);
             InputStream is = s.getInputStream();
             Scanner sc = new Scanner(is);

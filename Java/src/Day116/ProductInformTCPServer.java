@@ -1,6 +1,9 @@
 package Day116;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
@@ -22,27 +25,26 @@ public class ProductInformTCPServer {
 
 ////////////////////////////////////////////////////////////////////////////////////////
             //클라이언트 요청 - 처리 응답 = 출력 스트림
-            Scanner reader = new Scanner(new File("Product.txt"));
-            String result = null;
-            while (reader.hasNext()){
-                if (reader.next().contains(name)){
-                    result = reader.next();
-                    break;
+            FileReader fr = new FileReader("C:\\sba\\Workspace\\JavaLab\\Java\\Product.txt");
+            BufferedReader reader = new BufferedReader(fr);
+            String compare;
+            String response = null;
+            while((compare = reader.readLine())!= null) {
+                if(compare.contains(name)) {
+                    Scanner sc2 = new Scanner(compare);
+                    while(sc2.hasNextLine()) {
+                        response = sc2.nextLine();
+                    }
+                    sc2.close();
                 }
             }
 
-            reader.close();
-
-            String response;
-            if(result != null){
-                response = "해당하는 내용이 있습니다.\n"+result;
-            }else{
-                response = "해당하는 내용이 없습니다.\n";
-            }
+            if(response == null) response = "해당하는 내용이 없습니다.\n";
             OutputStream os = s.getOutputStream();
             byte[] responseBytes = response.getBytes();
             os.write(responseBytes);
 
+            reader.close();
 ////////////////////////////////////////////////////////////////////////////////////////
             s.close();//연결해제
         }
