@@ -1,9 +1,9 @@
-package Day122.member_crud;
+package Day122;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class OneSelectView implements View {
+public class TotalSelectView implements View {
 
 	@Override
 	public void input() {

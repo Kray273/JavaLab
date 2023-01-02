@@ -1,4 +1,4 @@
-package Day122.member_crud;
+package Day122;
 
 import java.util.Scanner;
 
@@ -22,10 +22,10 @@ public class MemberMain {
 		}
 		else if(menu == 1) {
 			new MemberInsertView().input(); 
-		}
-		else if(menu == 5) {
+		} else if(menu == 4) {
+			new OneSelectView().input();
+		} else if(menu == 5) {
 			new TotalSelectView().input();
-			
 		}
 		}//while
 	}//main

@@ -1,4 +1,4 @@
-package Day122.member_crud;
+package Day122;
 
 public class MemberDTO {
 	String id, pw, name, email, phone, address, indate;
@@ -10,6 +10,16 @@ public class MemberDTO {
 		super();
 		this.id = id;
 		this.name = name;
+		this.indate = indate;
+	}
+	public MemberDTO(String id, String pw, String name, String email, String phone, String address, String indate) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.address = address;
 		this.indate = indate;
 	}
 	

@@ -1,4 +1,4 @@
-package Day122.member_crud;
+package Day122;
 
 import java.util.Scanner;
 
