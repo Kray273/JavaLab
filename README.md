@@ -58,3 +58,5 @@ Day116 https://www.notion.so/Day-BE-116_-c9fd88df9c8d4e0ca524792c5b996735
 Day121 https://www.notion.so/Day-BE-121_-JDBC-8dcab498ea8c4a83958e1fb5b7c98122
 
 Day122 https://www.notion.so/Day-BE-122_-7a130825c0ea4c08a05fc05a32c59ca6
+
+Day123 https://www.notion.so/Day-BE-124_CRUD2-c2f3871ff5034a0481be6374de4b0426
