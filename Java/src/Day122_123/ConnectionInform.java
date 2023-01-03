@@ -1,4 +1,4 @@
-package Day122;
+package Day122_123;
 
 public class ConnectionInform {
 	// 드라이버 재사용을 위해 클래스 만들어서

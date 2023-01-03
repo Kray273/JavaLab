@@ -1,4 +1,4 @@
-package Day122;
+package Day122_123;
 
 public class MemberDTO {
 	String id, pw, name, email, phone, address, indate;
