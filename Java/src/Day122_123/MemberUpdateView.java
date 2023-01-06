@@ -27,10 +27,7 @@ public class MemberUpdateView implements View {
 			System.out.println(k + " : " + updateMap.get(k));
 		}
 
-
-		if(dto == null || dto.getPw() == null) {
-			return;
-		}
+		if(dto == null || dto.getPw() == null) return;
 
 		updateMap.put("id", dto.getId());
 

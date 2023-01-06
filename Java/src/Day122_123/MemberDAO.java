@@ -218,8 +218,7 @@ public class MemberDAO {
 			System.out.println("회원 탈퇴 처리 중 문제 발생 - 취소");
 			try {
 				con.rollback();
-			} catch (Exception s) {
-			}
+			} catch (Exception s) {}
 			// e.printStackTrace();
 		} finally {
 			try {
